@@ -21,9 +21,9 @@ class User < ActiveRecord::Base
   validates :username, :user_email, :password_digest, :presence => true
   validates :username, :user_email, :uniqueness => true
 
-  def self.find_by_credentials(email, password)
+  def self.find_by_credentials(email, pw)
     user = User.find_by_user_email(email)
-    if user && user.is_password(pw)
+    if user && user.is_password?(pw)
       user
     else
       nil
@@ -42,8 +42,8 @@ class User < ActiveRecord::Base
 
   def password=(pw)
      if pw.present?
-      @password = unencrypted_password
-      self.password_digest = BCrypt::Password.create(unencrypted_password)
+      @password = pw
+      self.password_digest = BCrypt::Password.create(pw)
     end
   end
 

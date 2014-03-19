@@ -1,0 +1,26 @@
+<div class="container">
+	<h1> Sign In! </h1>
+	<form action="<%= session_url %> " method="post">
+		<input
+		name="authenticity_token"
+		type="hidden"
+		value="<%= form_authenticity_token %>">
+
+		<label for="user_username">Email</label>
+		<br>
+		<input
+		id="user_username"
+		name="user[user_email]"
+		type="text">
+		<br>
+
+		<label for="user_password">Password</label> <br>
+		<input
+		id="user_password"
+		name="user[password]"
+		type="password">
+		<br>
+
+		<input type="submit" class="btn btn-primary" value="Sign Up!">
+	</form>
+</div>

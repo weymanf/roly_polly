@@ -12,5 +12,8 @@
  *= require_tree .
  */
 
- @import "bootstrap";  
- @import "bootstrap/modal";  
+@import "bootstrap";
+
+.sidebar {
+	background-color: #7B7B95;
+}

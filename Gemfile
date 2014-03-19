@@ -37,7 +37,7 @@ gem 'bcrypt-ruby',  require: 'bcrypt'
 
 gem 'annotate'
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.1.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
