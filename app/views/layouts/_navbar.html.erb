@@ -8,8 +8,14 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="#">Roly Polly</a>
+           <%= link_to "Roly Polly", polls_url, :class => "navbar-brand" %>
          </div>
+
+         <ul class="nav navbar-nav pull-left">
+           <% if login? %>
+           <li> <%= link_to "My Polls", user_url(current_user), :class => "nav-butts" %></li>
+          <% end %>
+         </ul>
 
 
         <div class="collapse navbar-collapse">
