@@ -14,5 +14,9 @@ class PollsController < ApplicationController
 
   end
 
+  def show
+
+  end
+
   
 end

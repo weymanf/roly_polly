@@ -21,6 +21,8 @@ class User < ActiveRecord::Base
   validates :username, :user_email, :password_digest, :presence => true
   validates :username, :user_email, :uniqueness => true
 
+  has_many :polls
+
   def self.find_by_credentials(email, pw)
     user = User.find_by_user_email(email)
     if user && user.is_password?(pw)
