@@ -14,6 +14,16 @@
 
 @import "bootstrap";
 
+
+.navbar-default .navbar-header .navbar-brand {
+    color: white;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
 .sidebar {
 	margin-left: 30px;
 	width: 200px;
@@ -24,8 +34,6 @@
 }
 
 .content {
-	border-style: dotted;
-	border-color: #CF8DDF;
 	margin-left: 30px;
 	height: 700px;
 }
@@ -52,4 +60,16 @@
 
 .nav-butts{
 	color: #FFFFFF;
+}
+
+.jumbotron {
+  background-color: #D4AAD4;
+  opacity:0.7;
+}
+
+.index-tron {
+	background-color: #FFFFE2;
+	opacity: 0.7;
+	height: 700px;
+	width: 100%;
 }

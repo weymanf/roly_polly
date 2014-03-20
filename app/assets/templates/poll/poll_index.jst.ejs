@@ -1,1 +1,9 @@
-<div class="index"> <p>All your Polls</p> </div> 
+<div class="jumbotron index-tron" >
+<div class="index"> <h4>All your Polls</h4> </div> 
+<br>
+<div class="container polls-contain"> 
+<% polls.forEach(function(poll) { %> 
+	<p> <a href="#/polls/<%=poll.escape("id")%>" > <%= poll.escape("title") %> </p>
+<% }); %>
+</div>
+</div>

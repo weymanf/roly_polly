@@ -4,7 +4,22 @@
 
 
 .index {
-background-color: #000000;
+background-color: #33334C;
 color:#ffffff;
+text-align: center;
 width: 100%;
+}
+
+
+.polls-contain {
+	overflow: scroll;
+	height: 500px;
+}
+
+.tiny {
+	background-color: blue;
+	height: 20px;
+	width: 5px;
+	color: white;
+	outline: 0;
 }

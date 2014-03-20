@@ -7,7 +7,7 @@ window.RolyPolly.Views.PollsIndex = Backbone.View.extend({
 
 	render: function() {
 		var indexContent = this.template({
-			posts: this.collection
+			polls: this.collection
 		})
 
 		this.$el.html(indexContent);

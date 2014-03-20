@@ -1,5 +1,6 @@
 json.(
 	poll,
+	:id,
 	:title,    
 	:user_id,
     :created_at,

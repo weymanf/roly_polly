@@ -25,7 +25,8 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 	newPoll: function() {
 		var newPoll = new RolyPolly.Models.Poll();
 		var newView = new RolyPolly.Views.PollForm({
-			model: newPoll
+			model: newPoll,
+			collection: this.polls
 		});
 
 		this._swapView(newView);

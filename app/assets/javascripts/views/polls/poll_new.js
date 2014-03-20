@@ -1,6 +1,10 @@
 window.RolyPolly.Views.PollForm = Backbone.View.extend({
 	template: JST["poll/poll_form"],
 
+	events: {
+		"submit form": "createPoll"
+	},
+
 	render: function() {
 	 	var newView = this.template({
 	 		poll: this.model
@@ -8,5 +12,11 @@ window.RolyPolly.Views.PollForm = Backbone.View.extend({
 
 	 	this.$el.html(newView);
 	 	return this;
+	},
+
+	createPoll: function(event) {
+		event.preventDefault();
+		var pollParams = $(event.currentTarget).serializeJSON().poll
+
 	}
 })

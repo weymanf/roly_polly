@@ -4,4 +4,5 @@ RolyPolly::Application.routes.draw do
   resources :polls
   get "/allpolls", to: "polls#allpolls"
   root to: 'polls#index'
+  resources :answer_choices
 end
