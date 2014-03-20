@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 
     if user
       sign_in(user)
-      redirect_to polls_url
+      redirect_to root_url
     else
       render :json => user
     end

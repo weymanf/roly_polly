@@ -1,0 +1,8 @@
+<div class="jumbotron">
+	<h3> All Polls </h3>
+	<ul>
+		<% @polls.each do |poll| %>
+		<li><%= link_to poll.title, poll_url(poll) %></li>
+		<% end %>
+	</ul>
+</div>
