@@ -2,7 +2,7 @@ window.RolyPolly.Views.PollsIndex = Backbone.View.extend({
 	template: JST["poll/poll_index"],
 
 	initialize: function(options) {
-		this.listenTo(this.collection, "synn add", this.render)
+		this.listenTo(this.collection, "synn add remove", this.render)
 	},
 
 	render: function() {

@@ -2,7 +2,9 @@ window.RolyPolly.Views.PollForm = Backbone.View.extend({
 	template: JST["poll/poll_form"],
 
 	events: {
-		"submit form": "createPoll"
+		"submit form": "createPoll",
+		"click #add-answer": "addAnswer",
+		"click #del-answer": "delAnswer"
 	},
 
 	render: function() {
@@ -16,7 +18,19 @@ window.RolyPolly.Views.PollForm = Backbone.View.extend({
 
 	createPoll: function(event) {
 		event.preventDefault();
-		var pollParams = $(event.currentTarget).serializeJSON().poll
+		var pollParams = $(event.currentTarget).serializeJSON().poll;
 
+	},
+
+	addAnswer: function() {
+		var randomNum = Math.floor((Math.random()*10000)+3);
+		var moreAns = JST["answer/answer_form"]({
+			ran: randomNum
+		})
+		$(".more-ans").append(moreAns)
+	},
+
+	delAnswer: function(event) {
+		$(".more-ch:last").remove();
 	}
 })

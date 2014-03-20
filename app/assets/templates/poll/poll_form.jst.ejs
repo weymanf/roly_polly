@@ -1,19 +1,31 @@
+
+
+<div class="container">
 <h3> New Poll </h3>
 
 <form> 
 
-	<label>Title
-		<input name="poll[title]" type="text">
+	<label>Title | Question
+		<input name="poll[title]" type="text" class="input-ch">
 		</label>
 		<br>
 		<br>
-	<h4> Answer Choices </h4>
+	<h4> Answer Choices <small> required (minimum of 2) </small></h4>
 	<div class="more-ans">
-		<input name="answer[title]" type="text">
+		<div class="ans-ch">
+		<input name="answer[1][title]" type="text" placeholder="Yes" class="input-ch">
+		</div>
+		
+		<div class="ans-ch">
+		<input name="answer[2][title]" type="text" placeholder="No" class="input-ch">
+		</div>
+
 	</div>
-	<button type="button" id="add-answer" class="btn btn-primary btn-xs">+</button>
+	<div class="buttss"> <button type="button" id="add-answer" class="btn btn-primary btn-xs">+</button>  <button type="button" id="del-answer" class="btn btn-primary btn-xs">-</button> </div>
 	<br>
 	<br>
 
 	<button class="create-poll btn btn-success">Create Poll</button>
 </form>
+
+</div>
