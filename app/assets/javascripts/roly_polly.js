@@ -4,10 +4,10 @@ window.RolyPolly = {
   Views: {},
   Routers: {},
   initialize: function() {
-  	var RolyPolly.polls = new RolyPolly.Collections.Polls()
- 	RolyPolly.router = new RolyPolly.Routers.RolyRouters({
+  	RolyPolly.polls = new RolyPolly.Collections.Polls();
+ 	RolyPolly.router = new RolyPolly.Routers.RolyRouter({
  		polls: RolyPolly.polls,
- 		$rootEl: $('#content')
+ 		$rootEl: $('.content')
  	})
 
  	Backbone.history.start();

@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
-//= require turbolinks
 //= require backbone
 //= require roly_polly
 //= require_tree ../templates

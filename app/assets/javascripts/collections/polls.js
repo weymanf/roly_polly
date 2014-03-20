@@ -1,4 +1,4 @@
 window.RolyPolly.Collections.Polls = Backbone.Collection.extend({
-	url: "/posts",
+	url: "/polls",
 	model: RolyPolly.Models.Poll
 });
