@@ -11,13 +11,14 @@ window.RolyPolly.Models.Poll = Backbone.Model.extend({
 	},
 
 	parse: function (jsonResp) {
-    if (jsonResp.answer_choices) {
-      this.answer_choices().set(jsonResp.answer_choices);
-      delete jsonResp.answer_choices;
-    }
+		if (jsonResp) {
+			if (jsonResp.answer_choices) {
+				this.answer_choices().set(jsonResp.answer_choices);
+				delete jsonResp.answer_choices;
+			}
 
-    return jsonResp;
-  	}
-
+			return jsonResp;
+		}
+	}
 
 })

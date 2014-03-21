@@ -11,7 +11,7 @@
 
 class Poll < ActiveRecord::Base
 
-  validates :title, :uniqueness => true, :presence => true
+  validates :title, :presence => true
 
   has_many :answer_choices
   belongs_to :user
