@@ -12,5 +12,6 @@
 class AnswerChoice < ActiveRecord::Base
 
   belongs_to :poll
+  has_many :responses, dependent: :destroy
 
 end
