@@ -16,5 +16,7 @@ class Poll < ActiveRecord::Base
   has_many :answer_choices
   belongs_to :user
 
+  accepts_nested_attributes_for :answer_choices
+
   
 end

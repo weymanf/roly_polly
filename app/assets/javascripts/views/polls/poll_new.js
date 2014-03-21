@@ -20,15 +20,17 @@ window.RolyPolly.Views.PollForm = Backbone.View.extend({
 		event.preventDefault();
 		var polls = this.collection
 		var pollParams = $(event.currentTarget).serializeJSON().poll;
-
 		var newPoll = new RolyPolly.Models.Poll(pollParams)
+		
 
-		newPoll.save({}, {
-			success: function () {
-			polls.add(newPoll);
-			Backbone.history.navigate("", { trigger: true });
-			}
-		});
+		debugger
+		this.collection.create({poll: pollParams});
+		// newPoll.save({}, {
+		// 	success: function () {
+		// 	polls.add(newPoll);
+		// 	Backbone.history.navigate("", { trigger: true });
+		// 	}
+		// });
 	},
 
 	addAnswer: function() {

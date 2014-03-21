@@ -16,13 +16,11 @@ class PollsController < ApplicationController
   end
 
   def create
-    @poll = Poll.new(poll_params)
-    @poll.user_id = current_user.id
 
     if current_user.polls.create(poll_params)
       render :json => @poll
     else
-      render :new
+      render :json => @poll.errors.full_messages
     end
   end
 
@@ -34,7 +32,7 @@ class PollsController < ApplicationController
 
 
   def poll_params
-    params.require(:poll).permit(:title)
+    params.require(:poll).permit(:title, :answer_choices_attributes => [:body])
   end
   
 end
