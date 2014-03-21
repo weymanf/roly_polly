@@ -17,6 +17,7 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 		var indexView = new RolyPolly.Views.PollsIndex({
 			collection: this.polls
 		})
+
 		this.polls.fetch();
 		this._swapView(indexView);
 	},
@@ -31,11 +32,14 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 		this._swapView(newView);
 	},
 
-	showPoll: function() {
-		this.polls
+	showPoll: function(id) {
+		var poll = this.polls.getOrFetch(id);
+		
+		var showView = new RolyPolly.Views.PollShow({
+			model: poll
+		})
 
-
-
+		this._swapView(showView);
 	},
 
 	_swapView: function(view) {
