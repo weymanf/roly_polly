@@ -1,0 +1,1 @@
+json.partial!("polls/poll", :poll => @poll, :answer_choices => @poll.answer_choices)

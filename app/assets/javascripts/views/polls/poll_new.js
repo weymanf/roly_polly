@@ -20,12 +20,11 @@ window.RolyPolly.Views.PollForm = Backbone.View.extend({
 		event.preventDefault();
 		var polls = this.collection
 		var pollParams = $(event.currentTarget).serializeJSON().poll;
-	
+		
 		this.collection.create({poll: pollParams}, {
 			success: function(poll) {
-				debugger
-				Backbone.history.navigate("", {trigger: true})
-
+				
+				Backbone.history.navigate("#polls/" + poll.get("id"), {trigger: true})
 			}
 		});
 	

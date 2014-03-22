@@ -34,8 +34,92 @@ width: 100%;
 
 .index-tron {
 	border-radius: 20px;
-	background-color: #E3E3EC;
+	background-color: #FFFFFF;
 	opacity: 0.7;
 	height: 900px;
 	width: 100%;
+}
+
+
+
+.poll-bar button {
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  border: 0;
+  color: blue;
+  width: 120px;
+  background-color: white;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.test-vote:hover {
+	background-color: lightblue;
+	color: black;
+}
+
+
+.poll-bar {
+	height: 400px;
+	background-color: pink;
+	opacity: 0.6;
+	width: 120px;
+	text-align: center;
+}
+
+.poll-bar h4{
+	background-color: black;
+	opacity: 1;
+	color: pink;
+}
+
+
+
+/* button rotation */
+
+.rotate {
+
+border-radius: 10px;
+background: teal;
+color: white;
+font-weight:bold;
+font-size:15px;
+padding:10px 15px;
+border:none;
+margin:10px;
+cursor:pointer;
+
+-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+
+-o-transition-property:width,height,-o-transform,background,font-size,opacity,color;
+-o-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+
+-moz-transition-property:width, height, -moz-transform, background, font-size, opacity, color;
+-moz-transition-duration:1s,1s,1s,1s,1s,1s,1s;
+
+transition-property:width,height,transform,background,font-size,opacity;
+transition-duration:1s,1s,1s,1s,1s,1s;
+
+-webkit-border-radius:5px;
+border-radius:5px;
+
+box-shadow:0 0 2px rgba(0,0,0,0.5);
+
+text-shadow:0 0 5px rgba(255,255,255,0.5);
+
+display:inline-block;    /* It is important for the button to rotate*/
+}
+
+
+.rotate:hover
+{
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(360deg);
+
+background:green;
+font-size:30px;
+color:#fff;
 }

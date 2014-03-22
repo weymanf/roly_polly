@@ -4,7 +4,6 @@ class PollsController < ApplicationController
 
   def index
     @polls = current_user.polls
-    
   end
 
   def allpolls
@@ -16,8 +15,8 @@ class PollsController < ApplicationController
   end
 
   def create
-
-    if current_user.polls.create(poll_params)
+    @poll = current_user.polls.new(poll_params)
+    if @poll.save
       render :json => @poll
     else
       render :json => @poll.errors.full_messages
@@ -25,7 +24,8 @@ class PollsController < ApplicationController
   end
 
   def show
-    @poll = Poll.find(params[:id]);
+    @poll = Poll.find(params[:id])
+    
   end
 
   private 

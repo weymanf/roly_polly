@@ -1,0 +1,14 @@
+<div>
+<h3> Vote Now </h3>
+
+<ul>
+	<% poll.answer_choices().forEach(function( answer) { %>
+		<li> <button class="chosen-ch" 
+		data-answer="<%= answer.escape("id") %>"
+		"><%= answer.escape("body") %> </li>
+
+	<%  }); %>
+</ul>
+
+
+</div>
