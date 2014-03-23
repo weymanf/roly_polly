@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.serializeJSON
+//= require d3
 //= require underscore
 //= require backbone
 //= require roly_polly
