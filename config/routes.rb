@@ -7,4 +7,7 @@ RolyPolly::Application.routes.draw do
   resources :answer_choices do 
     resources :responses
   end
+
+  get '/sms', to: 'responses#receive_txt'
+  post '/sms', to: 'responses#receive_txt'
 end

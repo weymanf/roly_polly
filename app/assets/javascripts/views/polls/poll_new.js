@@ -23,7 +23,6 @@ window.RolyPolly.Views.PollForm = Backbone.View.extend({
 		
 		this.collection.create({poll: pollParams}, {
 			success: function(poll) {
-				
 				Backbone.history.navigate("#polls/" + poll.get("id"), {trigger: true})
 			}
 		});

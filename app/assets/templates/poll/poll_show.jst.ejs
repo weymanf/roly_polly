@@ -1,9 +1,20 @@
 
 <div class="row"> 
-	<div class="col-md-7 the-poll">
+	<div class="col-md-7 col-md-offset-1 the-poll">
 	<h3> <%= poll.escape("title") %> </h3>
 	<hr>
 	<div class="poll-chart"></div>
+
+	<h3> Text to (510)817-0540 to Vote </h3>
+	<table class="table table-bordered">
+	<% poll.answer_choices().forEach(function( answer) { %>
+		<tr>
+		 <td><%= answer.escape("body") %></td>
+		 <td>303<%= answer.escape("id")%></td>
+		</tr>
+	<% }); %>
+	</table>
+
 	</div>
 
 	<div class="col-md-2 poll-attrs">

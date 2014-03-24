@@ -51,3 +51,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 # gem 'debugger', group: [:development, :test]
 
 gem 'backbone-on-rails'
+
+gem 'figaro'
+
+gem 'twilio-ruby'
