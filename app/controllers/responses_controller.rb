@@ -1,5 +1,7 @@
 class ResponsesController < ApplicationController
 
+  protect_from_forgery :except => :receive_text
+
   def create
     @response = Response.new(
       :answer_choice_id => params[:answer_choice_id]
