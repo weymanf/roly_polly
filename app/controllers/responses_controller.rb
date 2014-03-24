@@ -16,6 +16,7 @@ class ResponsesController < ApplicationController
 
   def receive_txt
     answer_choice_id = params[:Body][3..-1].to_i
+    puts params[:Body]
     answer = AnswerChoice.find(answer_choice_id)
     if answer
       answer.responses.create()
