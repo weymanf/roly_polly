@@ -3,6 +3,7 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 	initialize: function(options) {
 		this.$rootEl = options.$rootEl;
 		this.polls = options.polls;
+		this.sms = options.sms
 	},
 
 	routes: {
@@ -37,7 +38,8 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 		
 		var showView = new RolyPolly.Views.PollShow({
 			model: poll,
-			collection: this.polls
+			collection: this.polls,
+			sms: this.sms
 		})
 
 		this._swapView(showView);

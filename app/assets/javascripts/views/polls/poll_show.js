@@ -1,10 +1,14 @@
 window.RolyPolly.Views.PollShow = Backbone.View.extend({
 	template: JST["poll/poll_show"],
 
-	initialize: function(){
+	initialize: function(options){
+        this.sms = options.sms
 		this.model.fetch();
 		this.listenTo(this.model, "all", this.render);
-        this.listenTo(this.collection, "sync", this.render);
+        var that = this;
+        this.sms.bind('sms_received', function(data) {
+            that.model.fetch();           
+        } );
 	},
 
 	events: {
@@ -17,13 +21,15 @@ window.RolyPolly.Views.PollShow = Backbone.View.extend({
 			poll: this.model
 		})
 
+        this.collection.fetch();
 		this.$el.html(showContent);
 
-		    var w = 400,                        //width
-    h = 400,                            //height
-    r = 200,                            //radius
-    color = d3.scale.ordinal().range(["#0066FF", "#ecfa00", "#ff5000", "#38f4bc", "#56beff", "#4c4c4c",
-                           "#FF7900", "#B3FFC5", "#FF0066", "#00FF00", "#00FFFF", "#6600FF", "#9A46D9", "#9DD93E", "#B1CDED", "#459C7D", "#F4CB89",
+		var w = 400,                        //width
+        h = 400,                            //height
+        r = 200,                            //radius
+        color = d3.scale.ordinal().range(["#0066FF", "#ecfa00", "#ff5000", "#38f4bc", "#56beff", "#4c4c4c",
+                            "#FF7900", "#B3FFC5", "#FF0066", "#00FF00", "#00FFFF", "#6600FF", "#9A46D9",
+                            "#9DD93E", "#B1CDED", "#459C7D", "#F4CB89",
                            "#ED3388", "#F4CB31"]);     //builtin range of colors
 
     var getData = function(poll) {

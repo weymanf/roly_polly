@@ -8,6 +8,7 @@ class ResponsesController < ApplicationController
     )
 
     if @response.save
+
       render :json => @response
     else
       render :json => @response
@@ -22,6 +23,7 @@ class ResponsesController < ApplicationController
     answer = AnswerChoice.find(answer_choice_id)
     if answer
       answer.responses.create()
+      Pusher['sms'].trigger('sms_received', {})
       render :json => answer
     else  
       render :text => "wrong shit"
