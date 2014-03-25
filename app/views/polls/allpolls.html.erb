@@ -1,8 +1,20 @@
+<div class="all-poll-content"></div>
+
+
+
+
+
+
+
+
+
 <div class="poll-tron">
+	<hr>
 	<h3> All Polls </h3>
+
 	<ul>
 		<% @polls.each do |poll| %>
-		<li><%= link_to poll.title, poll_url(poll) %></li>
+		<li><%= link_to poll.title, '#/allpolls/' + poll.id.to_s %></li>
 		<% end %>
 	</ul>
 </div>
