@@ -28,6 +28,12 @@ class PollsController < ApplicationController
     
   end
 
+  def destroy
+    poll = Poll.find(params[:id])
+    poll.destroy
+    render :json => poll
+  end
+
   private 
 
 

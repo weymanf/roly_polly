@@ -13,7 +13,8 @@ window.RolyPolly.Views.PollShow = Backbone.View.extend({
 
 	events: {
 		"click .test-vote": "testVote",
-		"click .chosen-ch": "voteAnswer"
+		"click .chosen-ch": "voteAnswer",
+        "click .delete-poll": "destroyPoll"
 	},
 
 	render: function() {
@@ -131,6 +132,15 @@ window.RolyPolly.Views.PollShow = Backbone.View.extend({
         		}
         	});
         	$(".vote-options").html("")
+        },
+
+        destroyPoll: function(event){
+            event.preventDefault();
+            this.model.destroy({
+                success: function(poll) {
+                    Backbone.history.navigate("", { trigger: true} )
+                }
+            })
         }
 
     })
