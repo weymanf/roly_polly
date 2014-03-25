@@ -36,7 +36,8 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 		var poll = this.polls.getOrFetch(id);
 		
 		var showView = new RolyPolly.Views.PollShow({
-			model: poll
+			model: poll,
+			collection: this.polls
 		})
 
 		this._swapView(showView);

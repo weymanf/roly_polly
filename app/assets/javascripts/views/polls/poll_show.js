@@ -4,6 +4,7 @@ window.RolyPolly.Views.PollShow = Backbone.View.extend({
 	initialize: function(){
 		this.model.fetch();
 		this.listenTo(this.model, "all", this.render);
+        this.listenTo(this.collection, "sync", this.render);
 	},
 
 	events: {

@@ -55,3 +55,5 @@ gem 'backbone-on-rails'
 gem 'figaro'
 
 gem 'twilio-ruby'
+
+gem 'pusher'

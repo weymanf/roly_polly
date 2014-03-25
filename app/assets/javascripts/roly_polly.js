@@ -9,7 +9,7 @@ window.RolyPolly = {
  		polls: RolyPolly.polls,
  		$rootEl: $('.content')
  	})
-
+ 	debugger
  	Backbone.history.start();
   }
 };
