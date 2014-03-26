@@ -203,6 +203,14 @@ color:#fff;
 	fill: white;
 }
 
+.poll-chart svg:hover
+{
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         2s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+}
+
 
 /* frontpage */
 
