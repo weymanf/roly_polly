@@ -1,6 +1,6 @@
 class PollsController < ApplicationController
 
-  before_filter :require_sign_in
+  before_filter :require_sign_in, :except => [:allpolls, :show]
 
   def index
     @polls = current_user.polls

@@ -159,6 +159,11 @@ color:#fff;
 
 .poll-attrs td{
 	color: white;
+	font-size: 130%;
+}
+
+.poll-attrs td:hover{
+	background: pink;
 }
 
 .poll-attrs th{

@@ -61,7 +61,9 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 	},
 
 	allPolls: function() {
-		var allIndexView = new RolyPolly.Views.AllPollsIndex();
+		var allIndexView = new RolyPolly.Views.AllPollsIndex({
+			collection: this.allpolls
+		});
 
 		this._swapAllView(allIndexView);
 
