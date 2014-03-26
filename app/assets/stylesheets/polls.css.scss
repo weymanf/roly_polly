@@ -185,6 +185,9 @@ color:#fff;
 
 /* charts */
 
+.poll-chart {
+	opacity: 0.65;
+}
 
 .poll-chart .slice {
   stroke: white;
@@ -193,7 +196,8 @@ color:#fff;
 
 .poll-chart .slice text{
 
-	font-size: 175%;
+	font-size: 110%;
+	font-weight: bold;
 	stroke-width: 0.1;
 	stroke: black;
 	fill: white;
@@ -236,4 +240,8 @@ color:#fff;
     -webkit-animation-duration:         2s; 
     -webkit-animation-iteration-count:  infinite;
     -webkit-animation-timing-function: linear;
+}
+
+.awesome-doughnut {
+	opacity: 0.7;
 }
