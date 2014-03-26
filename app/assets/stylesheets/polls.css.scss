@@ -198,3 +198,42 @@ color:#fff;
 	stroke: black;
 	fill: white;
 }
+
+
+/* frontpage */
+
+.front-page {
+	height: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.front-page h3 {
+	color: #D11963;
+}
+
+.front-page div {
+	color: white;
+}
+
+
+
+/* logo */
+
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.logo img:hover
+{
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         2s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+}
