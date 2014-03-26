@@ -41,6 +41,22 @@ width: 100%;
 	margin-left: 10%;
 }
 
+.poll-bar a {
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  border: 0;
+  color: blue;
+  width: 120px;
+  background-color: white;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.poll-bar a:hover {
+	background-color: lightblue;
+	color: black;
+}
 
 
 .poll-bar button {

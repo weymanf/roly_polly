@@ -15,6 +15,11 @@
 @import "bootstrap";
 
 
+body {
+	position: relative;
+	padding-bottom: 250px;
+}
+
 .navbar-default .navbar-header .navbar-brand {
     color: white;
     text-align: center;
@@ -129,6 +134,7 @@ body {
 
 
 .poll-tron {
+	margin-top: 30px;
  	position:absolute;
    	bottom:0;
    	width: 100%;

@@ -3,13 +3,16 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 	initialize: function(options) {
 		this.$rootEl = options.$rootEl;
 		this.polls = options.polls;
-		this.sms = options.sms
+		this.sms = options.sms;
+		this.allpolls = options.allpolls;
 	},
 
 	routes: {
 		"": "myPolls",
 		"polls/new": "newPoll",
-		"polls/:id": "showPoll"
+		"polls/:id": "showPoll",
+		"allpolls": "allPolls",
+		"allpolls/:id": "showPubPolls"
 	},
 
 
@@ -45,13 +48,41 @@ window.RolyPolly.Routers.RolyRouter = Backbone.Router.extend({
 		this._swapView(showView);
 	},
 
+	showPubPolls: function(id) {
+		var poll = this.polls.getOrFetch(id);
+		
+		var showView = new RolyPolly.Views.AllPollShow({
+			model: poll,
+			collection: this.polls,
+			sms: this.sms
+		})
+
+		this._swapAllView(showView);
+	},
+
+	allPolls: function() {
+		var allIndexView = new RolyPolly.Views.AllPollsIndex();
+
+		this._swapAllView(allIndexView);
+
+	},
+
 	_swapView: function(view) {
 		if (this.currentView)
 			this.currentView.remove();
 		this.currentView = view
 
 		this.$rootEl.html(view.render().$el);
-	}
+	},
+
+	_swapAllView: function(view) {
+		if (this.currentView)
+			this.currentView.remove();
+		this.currentView = view
+
+		$(".all-poll-content").html(view.render().$el);
+	},
+
 
 
 })

@@ -1,0 +1,63 @@
+
+<div class="row"> 
+	<div class="col-md-7 col-md-offset-1 the-poll">
+	<h3> <%= poll.escape("title") %> </h3>
+	<hr>
+	<div class="poll-chart"></div>
+
+	<h3> Text to (510)817-0540 to Vote </h3>
+	<table class="table table-bordered">
+	<% poll.answer_choices().forEach(function( answer) { %>
+		<tr>
+		 <td><%= answer.escape("body") %></td>
+		 <td>303<%= answer.escape("id")%></td>
+		</tr>
+	<% }); %>
+	</table>
+
+	</div>
+
+	<div class="col-md-2 poll-attrs">
+	<h2> Answer Choices </h2>
+	<table class="table table-hover">
+  	<thead>
+  	<tr>
+  		<th>Answer</th>
+  		<th>Votes</th>
+  	</tr>
+  	</thead>
+	
+	<tbody>
+	<% poll.answer_choices().forEach(function( answer) { %>
+		<tr>
+		<td><%= answer.escape("body") %></td>
+		<td><%= answer.responses().length %></td>
+		</tr>
+	 <% }); %>
+	 </tbody>
+	 </table>
+
+	 <br>
+	 <br>
+
+	 <div class="vote-options"></div>
+
+
+	</div>
+
+	<div class="col-md-2 poll-controls">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="poll-bar">
+		<h4>Poll Controls </h4> 
+		<br>
+		<ul class="nav nav-pills nav-stacked">
+  			<li><button class="test-vote" >Test Voting</button> </li>
+  			<li><a href="#/allpolls"> Back to Index </a> </li>
+		</ul>
+		</div>
+	</div>
+</div>
