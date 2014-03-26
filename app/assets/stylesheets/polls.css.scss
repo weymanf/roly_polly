@@ -10,6 +10,9 @@ text-align: center;
 width: 100%;
 }
 
+svg {
+	padding: 10px;
+}
 
 .polls-contain {
 	overflow: scroll;
@@ -147,6 +150,7 @@ color:#fff;
 
 .the-poll td{
 	color: white;
+	font-size: 150%;
 }
 
 .poll-attrs h2{
@@ -154,6 +158,10 @@ color:#fff;
 }
 
 .poll-attrs td{
+	color: white;
+}
+
+.poll-attrs th{
 	color: white;
 }
 
@@ -170,3 +178,18 @@ color:#fff;
 }
 
 
+/* charts */
+
+
+.slice {
+  stroke: white;
+  stroke-width: 1;
+}
+
+.slice text{
+
+	font-size: 175%;
+	stroke-width: 0.1;
+	stroke: black;
+	fill: white;
+}

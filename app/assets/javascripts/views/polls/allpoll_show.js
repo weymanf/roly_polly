@@ -27,10 +27,10 @@ window.RolyPolly.Views.AllPollShow = Backbone.View.extend({
 		var w = 400,                        //width
         h = 400,                            //height
         r = 200,                            //radius
-        color = d3.scale.ordinal().range(["#0066FF", "#ecfa00", "#ff5000", "#38f4bc", "#56beff", "#4c4c4c",
-                            "#FF7900", "#B3FFC5", "#FF0066", "#00FF00", "#00FFFF", "#6600FF", "#9A46D9",
+        color = d3.scale.ordinal().range(["#2900A3", "#7A00A3", "#A3007A", "#A30029", "#0029A3", "#3200C7",
+                            "#4405FF", "#00678A", "#FF0066", "#00FF00", "#00FFFF", "#6600FF", "#9A46D9",
                             "#9DD93E", "#B1CDED", "#459C7D", "#F4CB89",
-                           "#ED3388", "#F4CB31"]);     //builtin range of colors
+                           "#ED3388", "#F4CB31"]);       //builtin range of colors
 
     var getData = function(poll) {
     	dataAr = [];

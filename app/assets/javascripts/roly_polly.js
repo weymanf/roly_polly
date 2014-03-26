@@ -17,10 +17,6 @@ window.RolyPolly = {
  		sms: smsChannel
  	})
  	Backbone.history.start();
-
- 	
-
-
   }
 };
 
