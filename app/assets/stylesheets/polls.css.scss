@@ -67,14 +67,32 @@ svg {
   margin-top: 1px;
   padding: 0;
   border: 0;
-  color: blue;
-  width: 120px;
-  background-color: white;
+  width: 110px;
   font: inherit;
+  color: white;
+  background-color:#1E1E1E;
   vertical-align: baseline;
 }
 
+.poll-bar a {
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  border: 0;
+  width: 110px;
+  font: inherit;
+  color: white;
+  background-color:#1E1E1E;
+  vertical-align: baseline;
+}
+
+
 .poll-bar button:hover {
+	background-color: lightblue;
+	color: black;
+}
+
+.poll-bar a:hover {
 	background-color: lightblue;
 	color: black;
 }
@@ -82,10 +100,15 @@ svg {
 
 .poll-bar {
 	height: 400px;
-	background-color: pink;
-	opacity: 0.6;
+	background-color: #1E1E1E;
+	opacity: 0.7;
 	max-width: 120px;
 	text-align: center;
+	border-radius: 5px;
+	border-style: solid;
+	border-width:1px;
+	border-color: white;
+	color: white;
 }
 
 .poll-bar h4{
@@ -93,6 +116,11 @@ svg {
 	opacity: 1;
 	color: pink;
 }
+
+.poll-bar input{
+	color: black;
+}
+
 
 
 
@@ -252,4 +280,9 @@ color:#fff;
 
 .awesome-doughnut {
 	opacity: 0.7;
+}
+
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: transparent;
 }
