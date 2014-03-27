@@ -29,6 +29,10 @@ body {
     color: white;
 }
 
+.navbar-default .navbar-nav > li > a:hover {
+    color: lightblue;
+}
+
 .sidebar {
 	margin-left: 30px;
 	max-width: 200px;
@@ -176,4 +180,9 @@ body {
 
 ul.poll-navvy li:hover {
 	background-color: #00CCFF
+}
+
+.form-group p
+{
+	color: red;
 }
