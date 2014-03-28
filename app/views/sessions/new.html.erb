@@ -1,9 +1,32 @@
 <div class="container">
-	<div class="form-group">
+	
 		<div class="row">
-			<div class="col-xs-3 col-xs-offset-1 pull-right">
+			<div class="col-xs-7 guess-page">
+				<p>
+				<h4>Hello.<br>This is a poll app clone of Poll everywhere <small>by <a href="https://github.com/weymanf">Weyman Fung</a></small></h4>
+				You can sign up, sign in or use the guest user provided below. <br>
+				<form action="<%= session_url %> " method="post" class="user-signin">
+					<input
+					name="authenticity_token"
+					type="hidden"
+					value="<%= form_authenticity_token %>">
 
+					<input name="user[user_email]" type="hidden" value="guess@123.com">
 					
+					<input name="user[password]" type= "hidden" value="guess123">
+
+					<input type="submit" class="btn btn-primary btn-large" value="Sign in as a guess!">
+				</form>
+
+				<br>
+				Check out the code on github <a href="https://github.com/weymanf/roly_polly">Roly Poly</a>
+				<p>
+			</div>
+
+
+
+			<div class="col-xs-3 col-xs-offset-1 pull-right">
+				<div class="form-group">
 				<p><%= flash[:errors].join("<br/>").html_safe if flash[:errors]%></p>
 
 				<form action="<%= session_url %> " method="post" class="user-signin">

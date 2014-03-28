@@ -1,3 +1,23 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.guess-page {
+	padding-top: 50px;
+	background-color: #FFFFFF;
+	opacity: 0.9;
+	height: 200px;
+	border-radius: 3px;
+}
+
+.guess-page small{
+	color: black;
+}
+
+
+.guess-page a:hover{
+	color: #d21989;
+	text-decoration: none;
+}
+
