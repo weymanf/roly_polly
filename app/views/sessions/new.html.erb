@@ -4,7 +4,9 @@
 			<div class="col-xs-7 guess-page">
 				<p>
 				<h4>Hello.<br>This is a poll app clone of Poll everywhere <small>by <a href="https://github.com/weymanf">Weyman Fung</a></small></h4>
-				You can sign up, sign in or use the guest user provided below. <br>
+				You can sign up, sign in or use the guest user provided below. Or checkout <%= link_to "the main page", allpolls_url + "#/allpolls" %>.
+				<br>
+				<br>
 				<form action="<%= session_url %> " method="post" class="user-signin">
 					<input
 					name="authenticity_token"
@@ -18,6 +20,7 @@
 					<input type="submit" class="btn btn-primary btn-large" value="Sign in as a guess!">
 				</form>
 
+				<br>
 				<br>
 				Check out the code on github <a href="https://github.com/weymanf/roly_polly">Roly Poly</a>
 				<p>
