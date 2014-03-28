@@ -181,6 +181,10 @@ color:#fff;
 	font-size: 150%;
 }
 
+.the-poll small {
+	color: lightblue;
+}
+
 .poll-attrs h2{
 	color: white;
 }
@@ -214,7 +218,7 @@ color:#fff;
 /* charts */
 
 .poll-chart {
-	opacity: 0.65;
+	opacity: 0.8;
 }
 
 .poll-chart .slice {
@@ -230,6 +234,7 @@ color:#fff;
 	stroke: black;
 	fill: white;
 }
+
 
 .poll-chart svg:hover
 {

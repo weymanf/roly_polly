@@ -1,7 +1,7 @@
 
 <div class="row"> 
-	<div class="col-md-7 col-md-offset-1 the-poll">
-	<h3> <%= poll.escape("title") %> </h3>
+	<div class="col-md-6 col-md-offset-1 the-poll">
+	<h3> <%= poll.escape("title") %> <small> by <%= poll.escape("user") %></small></h3>
 	<hr>
 	<div class="poll-chart"></div>
 
@@ -17,13 +17,14 @@
 
 	</div>
 
-	<div class="col-md-2 poll-attrs">
+	<div class="col-md-3 poll-attrs">
 	<h2> Answer Choices </h2>
 	<table class="table table-hover">
   	<thead>
   	<tr>
   		<th>Answer</th>
   		<th>Votes</th>
+  		<th>Percent</th>
   	</tr>
   	</thead>
 	
@@ -32,6 +33,7 @@
 		<tr>
 		<td><%= answer.escape("body") %></td>
 		<td><%= answer.responses().length %></td>
+		<td><%= Math.round((answer.responses().length / res * 10000))/100 %>%</td>
 		</tr>
 	 <% }); %>
 	 </tbody>

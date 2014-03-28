@@ -18,9 +18,18 @@ window.RolyPolly.Views.PollShow = Backbone.View.extend({
 	},
 
 	render: function() {
-      
+        var that = this;
+        var numRes = function() {
+            var res = 0;
+            that.model.answer_choices().forEach( function(answer) {
+                res += answer.responses().length;
+            });
+            return res;
+        };
+
 		var showContent = this.template({
-			poll: this.model
+			poll: this.model,
+            res: numRes()
 		})
 
         this.collection.fetch();

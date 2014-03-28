@@ -7,6 +7,7 @@ json.(
     :updated_at
 )
 
+json.user poll.user.username
 
 answer_choices ||= nil
 unless answer_choices.nil?
