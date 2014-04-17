@@ -24,6 +24,8 @@ RolyPolly::Application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
+
+  config.assets.initialize_on_precompile = false
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
