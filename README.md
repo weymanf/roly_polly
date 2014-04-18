@@ -2,7 +2,7 @@
 
 This project is a clone of [polleverywhere](http://www.polleverywhere.com/).
 
-The goal of this project was to allow users to create fun polls, and have their friends voite on it. 
+The goal of this project was to allow users to create fun polls, and have their friends vote on it. 
 
 Basic Features 
 ---------------
