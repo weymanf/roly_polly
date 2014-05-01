@@ -15,6 +15,7 @@
 @import "bootstrap";
 
 
+
 body {
 	position: relative;
 	padding-bottom: 250px;
@@ -39,12 +40,13 @@ body {
 }
 
 .row {
-	
+	width: 100%;
 }
 
 .content {
 	margin-left: 30px;
 	height: 700px;
+
 }
 
 .outt {
